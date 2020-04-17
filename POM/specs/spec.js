@@ -3,7 +3,7 @@ import { ClientFunction, Selector } from 'testcafe';
 fixture `Getting Started`
     .page `http://devexpress.github.io/testcafe/example`;
 
-test('Submit your Name', async t => {
+test('Submit your Name and assert it', async t => {
     await t
         .typeText('#developer-name', 'Pragadeeswaran')
         .click('#submit-button');
