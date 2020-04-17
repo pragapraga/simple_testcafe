@@ -8,8 +8,9 @@ test('Submit your Name and assert it', async t => {
         .typeText('#developer-name', 'Pragadeeswaran')
         .click('#submit-button');
     const getLocation = ClientFunction(() => document.location.href);
+    console.log(getLocation)
 
     await t
-        .expect(getLocation()).contains('https://devexpress.github.io/testcafe/example/thank-you.html')
+        .expect(getLocation()).contains('hank-you.html')
         .expect(await Selector('#article-header').textContent).eql('Thank you, Pragadeeswaran!');
 });
